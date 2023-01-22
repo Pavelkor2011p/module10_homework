@@ -1,9 +1,15 @@
-const button = document.querySelector('button');
-
 const updateWidthLabel = () => {
-    const currentWidth = window.innerWidth;
-    button.innerHTML = `Ширина экрана ${currentWidth} пикселей`
-}
+    let currentWidth = window.innerWidth;
+    let currentHight = window.innerHeight;
+    button.innerHTML = `Ширина экрана ${currentWidth} пикселей;
+                Высота экрана ${currentHight}`;
+};
+
+btn.addEventListener('click', () => {
+    alert(`Ширина экрана ${window.innerWidth} пикселей;
+                Высота экрана ${window.innerHeight}`);
+});
+
 
 updateWidthLabel();
 window.addEventListener('resize', updateWidthLabel);
